@@ -5,7 +5,7 @@ with open('mbox') as fp:
 	emailBuffer = []
 
 	for line in fp:
-		if (line.startswith("From transaction@etsy.com")):
+		if (line.startswith("From: Etsy Transactions <transaction@etsy.com>")):
 			emailStr = quopri.decodestring("".join(emailBuffer))
 
 			strPos = emailStr.find("Order Total:")
